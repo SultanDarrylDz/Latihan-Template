@@ -1,4 +1,4 @@
-<?php
+k<?php
 
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +19,9 @@ Route::get('contact', function(){
 }) -> name('contact');
 
 
-
+// Admin Route
+Route::prefix('admin')->group (function(){
+    Route::get('/', function(){
+      return view('admin.index');
+    });
+});
